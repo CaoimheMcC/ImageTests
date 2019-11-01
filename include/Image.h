@@ -19,6 +19,8 @@ class Image
     unsigned char * pixels();
     void setPixel(unsigned int _x, unsigned int _y, unsigned char _r, unsigned char _g, unsigned char _b);
     void getPixel(unsigned int _x, unsigned int _y, unsigned char &o_r, unsigned char &o_g, unsigned char &o_b);
+    void drawLineH(unsigned int _x0, unsigned int _x1, unsigned int _y0, unsigned int _y1);
+    void drawLineV(unsigned int _xstart, unsigned int _xend, unsigned int _ystart, unsigned int _yend);
     bool write(const std::string &_fname);
     void clearColour(unsigned char _r, unsigned char _g, unsigned char _b);
 

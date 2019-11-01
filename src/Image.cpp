@@ -22,6 +22,46 @@ Image::Image(const Image &_c)
 
 }
 
+void Image::drawLineH(unsigned int _xstart, unsigned int _xend, unsigned int _ystart, unsigned int _yend /*unsigned char _r, unsigned char _g, unsigned char _b*/)
+{
+
+    unsigned int dx = _xend - _xstart;
+    unsigned int dy = _yend - _ystart;
+    unsigned int D = 2*dy - dx;
+    unsigned int y = _ystart;
+
+
+    for(_xstart=0; _xstart <=_xend; ++_xstart)
+    {
+        setPixel(_xstart, _ystart, 255, 0, 0);
+        /*if (D > 0)
+        {
+            y = y +1;
+            D = D - 2*dx;
+        }
+
+        D = D + 2*dy;
+*/
+    }
+
+
+}
+
+void Image::drawLineV(unsigned int _xstart, unsigned int _xend, unsigned int _ystart, unsigned int _yend)
+{
+    unsigned int dx = _xend - _xstart;
+    unsigned int dy = _yend - _ystart;
+
+    for(_ystart=0; _ystart <= _yend; ++ _ystart)
+    {
+        setPixel(_xstart, _ystart, 255, 0, 0);
+    }
+
+}
+
+
+
+
 void Image::setPixel(unsigned int _x, unsigned int _y, unsigned char _r, unsigned char _g, unsigned char _b)
 {
 

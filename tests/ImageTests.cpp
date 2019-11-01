@@ -68,3 +68,17 @@ TEST(Image,copyCtor)
     EXPECT_EQ(g,0);
     EXPECT_EQ(b,0);
 }
+
+TEST(Image, drawlineH)
+{
+     Image i(100,100);
+     i.clearColour(128,128,128);
+     unsigned char r,g,b;
+     i.drawLineH(0,100,50,0);
+     i.getPixel(100,50,r,g,b);
+     EXPECT_EQ(r,255);
+     EXPECT_EQ(g,0);
+     EXPECT_EQ(b,0);
+
+
+}

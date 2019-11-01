@@ -1,6 +1,6 @@
 TARGET=Image
 TEMPLATE=lib
-CONFIG+=staticlib #builing a lib and making it static library
+CONFIG+=staticlib #builing a static lib
 CONFIG+=c++14
 OBJECTS_DIR=obj
 SOURCES += src/Image.cpp
